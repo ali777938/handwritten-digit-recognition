@@ -190,8 +190,17 @@ function predictDigit() {
     body: JSON.stringify({ image: imageData, mode: currentMode })
   })
   .then(function(response) {
-    return response.json().then(function(data) {
-      if (!response.ok) { showError(data.error || 'Prediction failed'); return; }
+    return response.text().then(function(text) {
+      var data = {};
+      try {
+        data = text ? JSON.parse(text) : {};
+      } catch (e) {
+        throw new Error('Invalid server response');
+      }
+      if (!response.ok) {
+        showError(data.error || 'Prediction failed');
+        return;
+      }
       showResult(data);
     });
   })
