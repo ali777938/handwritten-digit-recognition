@@ -3,11 +3,12 @@
 A deep learning web application that recognizes handwritten digits (single or multi-digit) using a CNN trained on MNIST.
 
 ## Group Members
-- Ali_324349
-- farouk_331844
-- Emad_341459
 - Ahmad_341668
 - Ahmad_341814
+- Ali_324349
+- Emad_341459
+- farouk_331844
+
 
 ## Features
 - Single digit recognition with confidence scores and probability for all 10 digits
