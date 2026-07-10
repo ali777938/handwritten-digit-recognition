@@ -24,7 +24,7 @@ A deep learning web application that recognizes handwritten digits (single or mu
 ## Local Setup
 ```bash
 pip install -r requirements.txt
-python train_model.py    # Train the model (~5-10 min)
+python train_model.py    # Train the model
 python app.py            # Start the server
 # Open http://localhost:5000
 ```
@@ -36,7 +36,6 @@ python app.py            # Start the server
 4. Render auto-detects render.yaml
    - Build: `pip install -r requirements.txt && python train_model.py`
    - Start: `gunicorn app:app`
-5. First deploy takes ~10 minutes (trains the model)
 
 ## Model Architecture
 - 3x Conv layers (32→64→128 filters) + MaxPool
@@ -51,11 +50,4 @@ python app.py            # Start the server
 4. Run CNN prediction on each crop
 5. Combine results into the full number
 
-## GitHub Contribution (Per Member)
-```bash
-git checkout -b feature/your-name
-# Make your changes
-git add . && git commit -m "feat: your contribution"
-git push origin feature/your-name
-# Open Pull Request on GitHub
-```
+
