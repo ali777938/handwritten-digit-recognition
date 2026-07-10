@@ -1,3 +1,5 @@
+# Developed and maintained by: [ali fande]
+
 import os, io, base64, numpy as np
 from flask import Flask, request, jsonify, render_template
 from PIL import Image, ImageOps
